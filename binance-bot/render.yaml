@@ -1,0 +1,16 @@
+services:
+  - type: worker
+    name: binance-bot
+    runtime: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: your_telegram_token
+      - key: TELEGRAM_CHAT_ID
+        value: your_chat_id
+      - key: BINANCE_API_KEY
+        value: your_binance_api_key
+      - key: BINANCE_API_SECRET
+        value: your_binance_api_secret
